@@ -1,3 +1,37 @@
+# Heritage Housing Issues
+
+## [View live website](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/)
+
+---
+## Table of Contents
+- [Heritage Housing Issues](#heritage-housing-issues)
+  - [View live website](#view-live-website)
+  - [Table of Contents](#table-of-contents)
+  - [Dataset Content](#dataset-content)
+  - [Business Requirements](#business-requirements)
+  - [Hypothesis and Validation Methods](#hypothesis-and-validation-methods)
+  - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
+  - [ML Business Case](#ml-business-case)
+  - [Dashboard Desig](#dashboard-desig)
+- [Issues Found During App Development and Deployment](#issues-found-during-app-development-and-deployment)
+- [Unfixed Bugs](#unfixed-bugs)
+- [Deployment](#deployment)
+  - [GitHub](#github)
+  - [Heroku](#heroku)
+  - [View live website](#view-live-website-1)
+- [Technologies Used](#technologies-used)
+    - [GitHub](#github-1)
+    - [Git](#git)
+    - [Codeanywhere](#codeanywhere)
+    - [Heroku](#heroku-1)
+    - [Python](#python)
+  - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+- [Credits](#credits)
+  - [Content](#content)
+  - [Acknowledgements](#acknowledgements)
+
+
+---
 ## Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
 * The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
@@ -38,7 +72,7 @@ Although your friend has an excellent understanding of property prices in her ow
 * 2 - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
 
-## Hypothesis and methods of validation
+## Hypothesis and Validation Methods
 * We suspect that the distribution of the sale prices is skewed to the right which might lead to a problem when it comes to predicting high sale prices. To validate the project hypothesis about the shape of the distribution, we plot a combined boxplot/histogram of the sale price.
 
 
@@ -81,51 +115,106 @@ Although your friend has an excellent understanding of property prices in her ow
 10. How will the client benefit?
     * The client will maximize the sales price for the inherited properties.
 
-## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+## Dashboard Desig
+The dashboard consists of five pages:
 
+1. The first page describes the project dataset and states the business requiremnents.
+2. The second page fullfills the first project requirement. It starts with stating the requirement in an info box. Three checkboxes implement the user stories relating to the first project requirement (see Business Requirements). When checked they display:
+   * A table showing the dataset.
+   * A heatmap of Spearman correlation coefficients.
+   * Scatterplots of correlated variables against sell price. The page also has a description of the meaning of the variables and a general conclusion.
+3. The third page fullfills the second project requirement (see Business Requirements). It has two tables showing the client's inherited houses data and predicted sale prices respectively. The sum of the sale prices is also displayed. The second part of the page has two input widgets and a button that enables the user to predict the sale price based on the inputs.
+4. The fourth page states the project hypothesis and its validation. It shows the distribution of sale price. Finally there is a paragraph about the model's limitation and how it may be connected to the project hypothesis.
+5. The fifth page starts with a general conclusion about the performance of the ML model. The pipeline steps are then presented followed by a bar plot showing the importance of each feature in the train set. The remaining two parts evaluate the ML model by computing the R2 score and three different error measures and by displaying a scatterplot of predicted versus actual sale price (which is the target).
 
+---
+# Issues Found During App Development and Deployment
+The following issues were found during app development and deployment<br>
+- To deploy Powdery Mildew Detector on Heroku, the stack by default did not support the Python version used to develop the app.<br>
+I adjusted this issue:
+   * By changing the stack of my project from 22 to 2
 
-## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+---
+# Unfixed Bugs
 
-## Deployment
+* There is no unfixed bugs.
+---
+# Deployment
+- Powdery Mildew Detector was deployed using Code Institute's mock terminal for Heroku.
+
+## GitHub
+Codeanywhere was used as a development environment where all the changes were committed to git version control system. The push command was used in Codeanywhere to save changes into GitHub.
+
+## Heroku
+**The steps for deployment are as follows:**
+1. Fork or clone this repository
+2. Log in to Heroku and create an App
+3. At the Deploy tab, select GitHub as the deployment method
+4. Link the Heroku app to the Github repository [Project-5](https://github.com/HumaIlyas/Project-5-Mildew-detection-leaves-images-identification)
+5. Select the branch to be deployed, then click Deploy Branch.
+6. The deployment process should happen smoothly if all deployment files are fully functional
+7. When the message appeared "Your app was successfully deployed"
+8. Click on "View" to open the app
+
+**In case of need to change to stack-20 in Heroku will be done by:**
+1. In Heroku click on Account Settings (under the avatar menu) on the Heroku Dashboard.
+2. Scroll down to the API Key section and click Reveal. Copy the key.
+3. Back in your IDE workspace, enter the following command in the terminal: heroku login -i , and enter your email then API key that you copied when prompted.
+4. Then use the command heroku stack:set heroku-20 -a <the_name_of_your_app>
+5. Now deploy again in the Heroku app
+
+## [View live website](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/)
+
+---
+# Technologies Used
+Different technologies were used to complete the contents of Powdery Mildew Detector.
+
+### GitHub
+* As a software hosting platform to keep project in a remote location.
+
+### Git
+* As a version-control system tracking.
+
+### Codeanywhere
+* As a development hosting platform.
+
 ### Heroku
+* Platform as a service offering to carry out application deployment, scaling, and management.
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+### Python
+*  As an interpreted, interactive, and object oriented scripting language.
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
-
+---
 ## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+The libraries used in this project are:
 
+* numpy==1.19.1
+* pandas==1.1.2
+* matplotlib==3.3.1
+* seaborn==0.11.0
+* pandas-profiling==3.2.0
+* streamlit==1.10.0
+* feature-engine==1.0.2
+* scikit-learn==0.24.2
+**As an example,** Seaborn was used to creating the heatmap of correlation coefficients, pandas-profiling to explore the variables in the dataset by showing their distribution, how many missing data they contain etc.
 
-## Credits 
+---
+# Credits 
+To complete the contents of Powdery Mildew Detection: Powdery Mildew Detection in Cherry Leaves, I learned coding and collected the information from different sources.
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* Learned Python coding from [Code Institute](https://learn.codeinstitute.net/)
+* Used Code Institute student template [template](Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves)
+* Collected information on good and bad coding practices from:
+  * [Documenting Python Code](https://realpython.com/documenting-python-code/)
+* The description on the malaria detection in blood cells provided by the tutor of the Code Institute with [Malaria Detection](https://github.com/Code-Institute-Solutions/WalkthroughProject01) and an app [Malaria Detector](https://malaria-predictor.onrender.com/) was useful as well as an inspiration to work on the project [Powdery Mildew Detection](https://github.com/HumaIlyas/Project-5-Mildew-detection-leaves-images-identification) and design an app [Powdery Mildew Detector](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/).
+* The information on how to build keras tuning model for hyperparameter optimization was collected from [Tensorflow](https://www.tensorflow.org/tutorials/keras/keras_tuner) and [KerasTuner](https://keras.io/keras_tuner/)
 
-### Content 
+## Content
+- The cherry with leaf icon in the dashboard.py file was taken from [Cherry Emoji](https://emojicombos.com/cherry).
+* The details about the powdery mildew were found at [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew)
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+## Acknowledgements
+- I acknowledge all the tutors and fellow students at [Slack](https://app.slack.com/client/T0L30B202/D03PENWED0F) for their guidance and assistance to complete Powdery Mildew Detection.
+* I acknowledge [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for mentor support and finishing touches.
 
-### Media
-
-- The photos used on the home and sign-up page are from This Open Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
-## Acknowledgements (optional)
-* In case you would like to thank the people that provided support through this project.
-
+[Back to Table of contents](#table-of-contents)
