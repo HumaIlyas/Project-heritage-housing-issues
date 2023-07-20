@@ -1,54 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-## Codeanywhere Template Instructions
-
-Welcome,
-
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the Gitpod Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Gitpod Template Instructions at least once, though! It contains some important information about Gitpod and the extensions we use. 
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
-1. Log into <a href="https://app.codeanywhere.com/" target="_blank" rel="noreferrer">CodeAnywhere</a> with your GitHub account.
-
-1. On your Dashboard, click on the New Workspace button
-
-1. Paste in the URL you copied from GitHub earlier
-
-1. Click Create
-
-1. Wait for the workspace to open. This can take a few minutes.
-
-1. Open a new terminal and <code>pip3 install -r requirements.txt</code>
-
-1. In the terminal type <code>pip3 install jupyter</code>
-
-1. In the terminal type <code>jupyter notebook --NotebookApp.token='' --NotebookApp.password=''</code> to start the jupyter server.
-
-1. Open port 8888 preview or browser
-
-1. Open the jupyter_notebooks directory in the jupyter webpage that has opened and click on the notebook you want to open.
-
-1. Click the button Not Trusted and choose Trust.
-
-Note that the kernel says Python 3. It inherits from the workspace so it will be Python-3.8.12 as installed by our template. To confirm this you can use <code>! python --version</code> in a notebook code cell.
-
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
 ## Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
 * The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
@@ -80,30 +29,57 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 |YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
 
-
-
-
-
 ## Business Requirements
-As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximising the sales price for the inherited properties.
+As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to help in maximizing the sales price for the inherited properties.
 
-Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that.
+Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that
 
-* 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
-* 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
+* 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
+* 2 - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
 
-## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them).
+## Hypothesis and methods of validation
+* We suspect that the distribution of the sale prices is skewed to the right which might lead to a problem when it comes to predicting high sale prices. To validate the project hypothesis about the shape of the distribution, we plot a combined boxplot/histogram of the sale price.
 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
 
+* Business requirement 1: Correlation study and data visualization
+  * As a client I want to inspect the house records data so that I can get an idea of which variables are important for the sale price.
+  * As a client I want to display a heatmap of the spearman correlation coefficients so that I can order the variables by importance concerning the sale price.
+  * As a client I want to plot the important variables against the sale price so that I can visualize how such a variable is correlated with the sale price.
+* Business requirement 2:
+  * As a client I want to display the inherited houses records data so that I can easily find a house attribute.
+  * As a client I want to use an ML model so that I can predict the price of my four inherited houses in Ames, Iowa.
+  * As a client I want to use the ML model so that I can predict the price of any other house in Ames, Iowa.
 
 ## ML Business Case
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
-
+1. What are the business requirements?
+   * The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
+   * The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+2. Is there any business requirement that can be answered with conventional data analysis?
+   * Yes, we can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
+3. Does the client need a dashboard or an API endpoint?
+   * The client needs a dashboard
+4. What does the client consider as a successful project outcome?
+   * A study showing the most relevant variables correlated to sale price.
+   * Also, a capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
+5. Can you break down the project into Epics and User Stories?
+   * Information gathering and data collection.
+   * Data visualization, cleaning, and preparation.
+   * Model training, optimization and validation.
+   * Dashboard planning, designing, and development.
+   * Dashboard deployment and release.
+6. Ethical or Privacy concerns?
+   * No. The client found a public dataset.
+7. Does the data suggest a particular model?
+   * The data suggests a regressor where the target is the sale price.
+8. What are the model's inputs and intended outputs?
+   * The inputs are house attribute information and the output is the predicted sale price.
+9. What are the criteria for the performance goal of the predictions?
+   * We agreed with the client on an R2 score of at least 0.75 on the train set as well as on the test set.
+10. How will the client benefit?
+    * The client will maximize the sales price for the inherited properties.
 
 ## Dashboard Design
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
