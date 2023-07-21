@@ -1,6 +1,6 @@
 # Heritage Housing Issues
 
-## [View live website](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/)
+## [View live website](https://heritage-house-prices-80a4732eae28.herokuapp.com/)
 
 ---
 ## Table of Contents
@@ -150,7 +150,7 @@ Codeanywhere was used as a development environment where all the changes were co
 1. Fork or clone this repository
 2. Log in to Heroku and create an App
 3. At the Deploy tab, select GitHub as the deployment method
-4. Link the Heroku app to the Github repository [Project-5](https://github.com/HumaIlyas/Project-5-Mildew-detection-leaves-images-identification)
+4. Link the Heroku app to the Github repository [Project-5](https://github.com/HumaIlyas/Project-heritage-housing-issues)
 5. Select the branch to be deployed, then click Deploy Branch.
 6. The deployment process should happen smoothly if all deployment files are fully functional
 7. When the message appeared "Your app was successfully deployed"
@@ -163,7 +163,7 @@ Codeanywhere was used as a development environment where all the changes were co
 4. Then use the command heroku stack:set heroku-20 -a <the_name_of_your_app>
 5. Now deploy again in the Heroku app
 
-## [View live website](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/)
+## [View live website](https://heritage-house-prices-80a4732eae28.herokuapp.com/)
 
 ---
 # Technologies Used
