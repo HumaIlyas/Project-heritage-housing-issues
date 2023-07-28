@@ -27,7 +27,6 @@
     - [Python](#python)
   - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
 - [Credits](#credits)
-  - [Content](#content)
   - [Acknowledgements](#acknowledgements)
 
 
@@ -130,7 +129,7 @@ The dashboard consists of five pages:
 ---
 # Issues Found During App Development and Deployment
 The following issues were found during app development and deployment<br>
-- To deploy Powdery Mildew Detector on Heroku, the stack by default did not support the Python version used to develop the app.<br>
+- To deploy Heritage Housing Issues on Heroku, the stack by default did not support the Python version used to develop the app.<br>
 I adjusted this issue:
    * By changing the stack of my project from 22 to 2
 
@@ -140,7 +139,7 @@ I adjusted this issue:
 * There is no unfixed bugs.
 ---
 # Deployment
-- Powdery Mildew Detector was deployed using Code Institute's mock terminal for Heroku.
+- Heritage Housing Issues was deployed using Code Institute's mock terminal for Heroku.
 
 ## GitHub
 Codeanywhere was used as a development environment where all the changes were committed to git version control system. The push command was used in Codeanywhere to save changes into GitHub.
@@ -167,7 +166,7 @@ Codeanywhere was used as a development environment where all the changes were co
 
 ---
 # Technologies Used
-Different technologies were used to complete the contents of Powdery Mildew Detector.
+Different technologies were used to complete the contents of Heritage Housing Issues.
 
 ### GitHub
 * As a software hosting platform to keep project in a remote location.
@@ -200,18 +199,14 @@ The libraries used in this project are:
 
 ---
 # Credits 
-To complete the contents of Powdery Mildew Detection: Powdery Mildew Detection in Cherry Leaves, I learned coding and collected the information from different sources.
+To complete the contents of Heritage Housing Issues, I learned coding and collected the information from different sources.
 
 * Learned Python coding from [Code Institute](https://learn.codeinstitute.net/)
-* Used Code Institute student template [template](Code-Institute-Solutions/milestone-project-mildew-detection-in-cherry-leaves)
+- Used Code Institute student template [template](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues)
 * Collected information on good and bad coding practices from:
   * [Documenting Python Code](https://realpython.com/documenting-python-code/)
-* The description on the malaria detection in blood cells provided by the tutor of the Code Institute with [Malaria Detection](https://github.com/Code-Institute-Solutions/WalkthroughProject01) and an app [Malaria Detector](https://malaria-predictor.onrender.com/) was useful as well as an inspiration to work on the project [Powdery Mildew Detection](https://github.com/HumaIlyas/Project-5-Mildew-detection-leaves-images-identification) and design an app [Powdery Mildew Detector](https://project-5-image-identification-4f5afac6ab95.herokuapp.com/).
-* The information on how to build keras tuning model for hyperparameter optimization was collected from [Tensorflow](https://www.tensorflow.org/tutorials/keras/keras_tuner) and [KerasTuner](https://keras.io/keras_tuner/)
 
-## Content
-- The cherry with leaf icon in the dashboard.py file was taken from [Cherry Emoji](https://emojicombos.com/cherry).
-* The details about the powdery mildew were found at [Powdery mildew](https://en.wikipedia.org/wiki/Powdery_mildew)
+- The description on the prediction if a prospect will churn provided by the tutor of the Code Institute with [Predict Churn](https://github.com/Code-Institute-Solutions/churnometer) and an app [Churnometer](https://churnometer.herokuapp.com/) was useful as well as an inspiration to work on the project [Heritage Housing Issues](https://github.com/HumaIlyas/Project-heritage-housing-issues) and design an app [House Prices in Ames, Iowa](https://heritage-house-prices-80a4732eae28.herokuapp.com/).
 
 ## Acknowledgements
 - I acknowledge all the tutors and fellow students at [Slack](https://app.slack.com/client/T0L30B202/D03PENWED0F) for their guidance and assistance to complete Powdery Mildew Detection.
