@@ -12,7 +12,7 @@
   - [Hypothesis and Validation Methods](#hypothesis-and-validation-methods)
   - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
   - [ML Business Case](#ml-business-case)
-  - [Dashboard Desig](#dashboard-desig)
+  - [Dashboard Design](#dashboard-design)
 - [Issues Found During App Development and Deployment](#issues-found-during-app-development-and-deployment)
 - [Unfixed Bugs](#unfixed-bugs)
 - [Deployment](#deployment)
@@ -115,7 +115,7 @@ Although your friend has an excellent understanding of property prices in her ow
 10. How will the client benefit?
     * The client will maximize the sales price for the inherited properties.
 
-## Dashboard Desig
+## Dashboard Design
 The dashboard consists of five pages:
 
 1. The first page describes the project dataset and states the business requiremnents.
